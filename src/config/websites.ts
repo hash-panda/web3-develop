@@ -14,7 +14,7 @@ export const websites: SITES = {
   'home': [
     {
       title: 'Github',
-      url: 'https://github.com',
+      url: 'https://github.com/1',
       image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
       description: 'GitHub',
       key: 'github'
@@ -28,7 +28,7 @@ export const websites: SITES = {
     },
     {
       title: 'Github',
-      url: 'https://github.com',
+      url: 'https://github.com/2',
       image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
       description: 'GitHub是一个面向开源及私有软件项目的托管平台',
       key: 'github2'
@@ -46,83 +46,6 @@ export const websites: SITES = {
       image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
       description: 'GitHub是一个面向开源及私有软件项目的托管平台',
       key: 'github4'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com/fdafdafdasfafdsafdsfsadafa/fdasfadfasf/fdsafafdsa',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台GitHub是一个面向开源及私有软件项目的托管平台GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github5'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github6'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github7'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub',
-      key: 'github8'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com/fdafdafdasfafdsafdsfsadafa/fdasfadfasf/fdsafafdsa',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台GitHub是一个面向开源及私有软件项目的托管平台GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github11'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github12'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github13'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github14'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com/fdafdafdasfafdsafdsfsadafa/fdasfadfasf/fdsafafdsa',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台GitHub是一个面向开源及私有软件项目的托管平台GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github15'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github16'
-    },
-    {
-      title: 'Github',
-      url: 'https://github.com',
-      image: 'https://avatars.githubusercontent.com/u/58292274?s=400&u=a46b463019b90c071a27243c2add5d0177b482e4&v=4',
-      description: 'GitHub是一个面向开源及私有软件项目的托管平台',
-      key: 'github17'
     }
   ],
   'blockchain': [

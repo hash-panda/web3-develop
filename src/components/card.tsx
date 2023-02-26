@@ -1,16 +1,13 @@
-import { Card, Text, Avatar, Tooltip } from '@nextui-org/react'
+import { Card, Text, Avatar, Tooltip, Modal, Button } from '@nextui-org/react'
 import React from 'react'
-import { Box } from './styles/box'
 import { Flex } from './styles/flex'
 import { SITE } from '../config/websites'
-import { useRouter } from 'next/router'
 
 export const MyCard = (web: SITE | any) => {
   const { site } = web
-  const router = useRouter()
   return (
     <Tooltip content={site.url} enterDelay={400}>
-      <Card isPressable css={{ mw: '375px', width: '20rem', height: '7rem', bg: '$blue600', borderRadius: '$xl', px: '$6', cursor: 'pointer' }}>
+      <Card isHoverable isPressable css={{ mw: '375px', width: '20rem', height: '7rem', bg: '$blue600', borderRadius: '$xl', px: '$6', cursor: 'pointer' }}>
         <Card.Body css={{ py: '$0' }}>
           <Flex css={{ gap: '$6', py: '$4' }} direction={'row'} align={'center'}>
             <Avatar

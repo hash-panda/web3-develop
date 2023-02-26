@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Navbar } from '@nextui-org/react'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { GithubIcon } from '../icons/navbar/github-icon'
 import { SupportIcon } from '../icons/navbar/support-icon'
 import { Box } from '../styles/box'
@@ -43,9 +44,12 @@ export const NavbarWrapper = ({ children }: Props) => {
             <DarkModeSwitch />
           </Navbar.Content>
           <Navbar.Content>
-            <Link href='https://github.com' target={'_blank'}>
+            <Link href='https://github.com/geekDAO/web3-dev-awesome' target={'_blank'}>
               <GithubIcon />
             </Link>
+          </Navbar.Content>
+          <Navbar.Content hideIn={'md'}>
+            <ConnectButton />
           </Navbar.Content>
         </Navbar.Content>
       </Navbar>

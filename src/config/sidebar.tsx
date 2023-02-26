@@ -17,10 +17,5 @@ export const sidebars: menu[] = [
     title: 'Blockchain',
     icon: <HomeIcon />,
     key: 'blockchain'
-  },
-  {
-    title: 'Home2',
-    icon: <HomeIcon />,
-    key: 'home2'
   }
 ]

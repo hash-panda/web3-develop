@@ -1,31 +1,31 @@
 import { Text } from '@nextui-org/react'
 import React, { useState } from 'react'
-import { AcmeIcon } from '../icons/acme-icon'
+import { Logo } from '../icons/logo'
 import { Box } from '../styles/box'
 import { Flex } from '../styles/flex'
 
-interface Company {
+interface Title {
   name: string
-  location: string
+  desc: string
   logo: React.ReactNode
 }
 
 export const SidebarTitle = () => {
-  const [company, setCompany] = useState<Company>({
+  const [title, setTitle] = useState<Title>({
     name: 'Web3 Dev Awesome',
-    location: 'web3 kits',
-    logo: <AcmeIcon />,
+    desc: 'web3 kits',
+    logo: <Logo />,
   })
   return (
     <Box>
       <Flex align={'center'} css={{ gap: '$7' }}>
-        {company.logo}
+        {title.logo}
         <Box>
           <Text h3 size={'$xl'} weight={'medium'} css={{ m: 0, color: '$accents9', lineHeight: '$lg', mb: '-$5' }}>
-            {company.name}
+            {title.name}
           </Text>
           <Text span weight={'medium'} size={'$xs'} css={{ color: '$accents8' }}>
-            {company.location}
+            {title.desc}
           </Text>
         </Box>
       </Flex>
