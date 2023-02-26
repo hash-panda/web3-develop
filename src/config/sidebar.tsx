@@ -9,13 +9,13 @@ interface menu {
 
 export const sidebars: menu[] = [
   {
-    title: 'Home',
+    title: '网址导航',
     icon: <HomeIcon />,
-    key: 'home'
+    key: 'links'
   },
   {
-    title: 'Blockchain',
+    title: '开发指引',
     icon: <HomeIcon />,
-    key: 'blockchain'
+    key: 'articles'
   }
 ]
