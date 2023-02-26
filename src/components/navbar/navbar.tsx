@@ -44,7 +44,7 @@ export const NavbarWrapper = ({ children }: Props) => {
             <DarkModeSwitch />
           </Navbar.Content>
           <Navbar.Content>
-            <Link href='https://github.com/geekDAO/web3-dev-awesome' target={'_blank'}>
+            <Link href='https://github.com/geekDAO/web3-develop' target={'_blank'}>
               <GithubIcon />
             </Link>
           </Navbar.Content>
