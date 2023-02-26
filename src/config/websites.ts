@@ -15,7 +15,7 @@ export const websites: SITES = {
     {
       title: 'thirdweb',
       url: 'https://thirdweb.com/',
-      image: 'https://portal.thirdweb.com/img/thirdweb-logo-transparent-black.svg',
+      image: 'https://thirdweb.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwhite-logo.a8cda9b2.png&w=1080&q=75',
       description: 'thirdweb is a complete web3 development framework that provides everything you ne',
       key: 'thirdweb'
     },
