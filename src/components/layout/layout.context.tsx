@@ -8,7 +8,7 @@ interface SidebarContext {
 }
 
 export const SidebarContext = createContext<SidebarContext>({
-   activeMenu: 'home',
+   activeMenu: 'links',
    collapsed: false,
    setCollapsed: () => {},
    setActiveMenu: () => {},

@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   })
   return (
     <Box css={{ overflow: 'hidden', height: '100%', mt: '$6' }}>
-      <Flex justify={'center'}>
+      <Flex justify={'start'}>
         <Flex css={{ 'px': '$12', 'pt': '$5', 'gap': '$12', 'height': '100%', 'flexWrap': 'wrap'}} direction={'row'} justify={'start'}>
           { cards }
         </Flex>

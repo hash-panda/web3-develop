@@ -11,7 +11,7 @@ interface Props {
 
 export const Layout = ({ children }: Props) => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
-  const [currentMenu, setCurrentMenu] = React.useState('home')
+  const [currentMenu, setCurrentMenu] = React.useState('links')
   const [_, setLocked] = useLockedBody(false)
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen)
