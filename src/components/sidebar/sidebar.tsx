@@ -7,7 +7,7 @@ import { SidebarItem } from './sidebar.item'
 // import { SidebarMenu } from './sidebar.menu'
 import { useSidebarContext } from '../layout/layout.context'
 import { useRouter } from 'next/router'
-import { sidebars } from '../../config/sidebar'
+import { websites } from '../../config/websites'
 
 export const SidebarWrapper = () => {
   const router = useRouter()
@@ -22,9 +22,9 @@ export const SidebarWrapper = () => {
         <Flex direction={'column'} justify={'between'} css={{ height: '100%' }}>
           <Sidebar.Body className='body sidebar'>
             {
-              sidebars.map((s) => {
+              websites.map((s) => {
                 return (
-                  <SidebarItem key={s.key} title={s.title} icon={s.icon} isActive={activeMenu === s.key} href={s.key} />
+                  <SidebarItem key={s.key} title={s.name} icon={s.icon} isActive={activeMenu === s.key} href={s.key} />
                 )
               })
             }

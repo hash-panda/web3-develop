@@ -4,7 +4,7 @@ import { NavbarWrapper } from '../navbar/navbar'
 import { SidebarWrapper } from '../sidebar/sidebar'
 import { SidebarContext } from './layout.context'
 import { WrapperLayout } from './layout.styles'
-import { sidebars } from '../../config/sidebar'
+import { websites } from '../../config/websites'
 
 interface Props {
   children: React.ReactNode
@@ -12,7 +12,7 @@ interface Props {
 
 export const Layout = ({ children }: Props) => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
-  const [currentMenu, setCurrentMenu] = React.useState(sidebars[0].key || '')
+  const [currentMenu, setCurrentMenu] = React.useState(websites[0].key || '')
   const [_, setLocked] = useLockedBody(false)
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen)
@@ -20,6 +20,7 @@ export const Layout = ({ children }: Props) => {
   }
   const handleCurrentMenu = (href: string) => {
     setCurrentMenu(href)
+    // scroll({})
   }
   return (
     <SidebarContext.Provider

@@ -1,5 +1,5 @@
 import {createContext, useContext} from 'react';
-import { sidebars } from '../../config/sidebar'
+import { websites } from '../../config/websites'
 
 interface SidebarContext {
    activeMenu: string;
@@ -9,7 +9,7 @@ interface SidebarContext {
 }
 
 export const SidebarContext = createContext<SidebarContext>({
-   activeMenu: sidebars[0].key || '',
+   activeMenu: websites[0].key || '',
    collapsed: false,
    setCollapsed: () => {},
    setActiveMenu: () => {},

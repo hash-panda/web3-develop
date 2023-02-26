@@ -20,7 +20,7 @@ export const SidebarItem = ({ icon, title, isActive, href = '' }: Props) => {
     }
   }
   return (
-    <Link css={{ color: '$accents9', maxWidth: '100%', width: '100%' }}>
+    <Link css={{ color: '$accents9', maxWidth: '100%', width: '100%' }} href={`#${href}`}>
       <Flex onClick={handleClick.bind(this, href)} css={{
           'gap': '$6',
           'width': '100%',
@@ -34,7 +34,7 @@ export const SidebarItem = ({ icon, title, isActive, href = '' }: Props) => {
           '&:active': {
             transform: 'scale(0.98)',
           },
-          ...(isActive ? { 'bg': '$blue200', '& svg path': { fill: '$blue600', } } : { '&:hover': { bg: '$accents2' } })
+          ...(isActive ? { 'bg': '$purple200', '& svg path': { fill: '$purple600', } } : { '&:hover': { bg: '$accents2' } })
         }}
         align={'center'}
       >
