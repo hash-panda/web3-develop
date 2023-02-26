@@ -23,9 +23,6 @@ const Home: NextPage = () => {
   })
   return (
     <Box css={{ overflow: 'hidden', height: '100%', mt: '$6' }}>
-      { isConnected && <Box css={{ 'px': '$12' }}>
-        <Account />
-      </Box> }
       <Flex justify={'center'}>
         <Flex css={{ 'px': '$12', 'pt': '$5', 'gap': '$12', 'height': '100%', 'flexWrap': 'wrap'}} direction={'row'} justify={'start'}>
           { cards }
