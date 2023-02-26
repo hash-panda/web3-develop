@@ -1,6 +1,6 @@
 import '@rainbow-me/rainbowkit/styles.css'
 import '../styles/globals.css'
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
+import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit'
 import { createTheme, NextUIProvider } from '@nextui-org/react'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
@@ -10,14 +10,14 @@ import { WagmiConfig } from 'wagmi'
 import { Layout } from '../components/layout/layout'
 import { chains, client } from '../wagmi'
 
-const lightTheme = createTheme({
+const lightThemeConfig = createTheme({
   type: 'light',
   theme: {
     colors: {}
   }
 })
 
-const darkTheme = createTheme({
+const darkThemeConfig = createTheme({
   type: 'dark',
   theme: {
     colors: {}
@@ -32,13 +32,18 @@ function App({ Component, pageProps }: AppProps) {
       defaultTheme="dark"
       attribute="class"
       value={{
-        light: lightTheme.className,
-        dark: darkTheme.className,
+        light: lightThemeConfig.className,
+        dark: darkThemeConfig.className,
       }}
     >
       <NextUIProvider>
         <WagmiConfig client={client}>
-          <RainbowKitProvider chains={chains}>
+          <RainbowKitProvider theme={
+            darkTheme({
+              accentColor: '#A653F6',
+              accentColorForeground: 'white',
+            })
+          } chains={chains}>
             <NextHead>
               <title>Web3 Develop</title>
             </NextHead>
