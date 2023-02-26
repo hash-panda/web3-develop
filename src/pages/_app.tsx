@@ -29,7 +29,7 @@ function App({ Component, pageProps }: AppProps) {
   React.useEffect(() => setMounted(true), [])
   return (
     <NextThemesProvider
-      defaultTheme="system"
+      defaultTheme="dark"
       attribute="class"
       value={{
         light: lightTheme.className,
@@ -40,7 +40,7 @@ function App({ Component, pageProps }: AppProps) {
         <WagmiConfig client={client}>
           <RainbowKitProvider chains={chains}>
             <NextHead>
-              <title>My wagmi + RainbowKit App</title>
+              <title>Web3 Develop</title>
             </NextHead>
             <Layout>
               {mounted && <Component {...pageProps} />}

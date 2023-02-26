@@ -11,7 +11,7 @@ const { chains, provider, webSocketProvider } = configureChains(
 )
 
 const { connectors } = getDefaultWallets({
-  appName: 'My wagmi + RainbowKit App',
+  appName: 'Web3 Develop',
   chains,
 })
 
