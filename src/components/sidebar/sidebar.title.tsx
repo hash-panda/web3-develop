@@ -12,8 +12,8 @@ interface Title {
 
 export const SidebarTitle = () => {
   const [title, setTitle] = useState<Title>({
-    name: 'Web3 Dev Awesome',
-    desc: 'web3 kits',
+    name: 'Web3 Develop',
+    desc: 'Web3开发入门，从这里开始',
     logo: <Logo />,
   })
   return (
