@@ -18,9 +18,9 @@ const Home: NextPage = () => {
     setVisible(true)
     setLink(url)
   }
-  const cards = websites[activeMenu].map(i => {
+  const cards = websites && websites[activeMenu] ? websites[activeMenu].map(i => {
     return (<MyCard key={i.key} site={i} onClick={modalHandler.bind(this, i.url)} />)
-  })
+  }) : ''
   return (
     <Box css={{ overflow: 'hidden', height: '100%', mt: '$6' }}>
       <Flex justify={'start'}>

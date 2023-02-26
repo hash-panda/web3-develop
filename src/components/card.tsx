@@ -7,7 +7,7 @@ export const MyCard = (web: SITE | any) => {
   const { site } = web
   return (
     <Tooltip content={site.url} enterDelay={400}>
-      <Card isHoverable isPressable css={{ mw: '375px', width: '20rem', height: '7rem', bg: '$blue600', borderRadius: '$xl', px: '$6', cursor: 'pointer' }}>
+      <Card isHoverable isPressable css={{ mw: '375px', width: '20rem', maxHeight: '10rem', bg: '$blue600', borderRadius: '$xl', px: '$6', cursor: 'pointer' }}>
         <Card.Body css={{ py: '$0' }}>
           <Flex css={{ gap: '$6', py: '$4' }} direction={'row'} align={'center'}>
             <Avatar
