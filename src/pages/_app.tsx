@@ -9,7 +9,7 @@ import * as React from 'react'
 import { WagmiConfig } from 'wagmi'
 import { Layout } from '../components/layout/layout'
 import { chains, client } from '../wagmi'
-
+/* 自定义浅色主题 */
 const lightThemeConfig = createTheme({
   type: 'light',
   theme: {
@@ -31,7 +31,7 @@ const lightThemeConfig = createTheme({
     }
   }
 })
-
+/* 自定义黑暗主题 */
 const darkThemeConfig = createTheme({
   type: 'dark',
   theme: {
@@ -58,6 +58,7 @@ function App({ Component, pageProps }: AppProps) {
   const [mounted, setMounted] = React.useState(false)
   React.useEffect(() => setMounted(true), [])
   return (
+    /* 引入nextUI theme */
     <NextThemesProvider
       defaultTheme="dark"
       attribute="class"
@@ -66,7 +67,9 @@ function App({ Component, pageProps }: AppProps) {
         dark: darkThemeConfig.className,
       }}
     >
+      {/* 引入nextUI provider */}
       <NextUIProvider>
+        {/* 引入wagmi */}
         <WagmiConfig client={client}>
           <RainbowKitProvider theme={
             darkTheme({

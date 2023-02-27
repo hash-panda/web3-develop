@@ -14,17 +14,15 @@ interface Props {
 export const NavbarWrapper = ({ children }: Props) => {
   return (
     <Box css={{ position: 'relative', display: 'flex', flexDirection: 'column', flex: '1 1 auto' }}>
+      {/* 这里设置sticky样式需注意任意父元素的overflow须为visible类型 */}
       <Navbar isBordered variant={'sticky'} css={{
           'borderBottom': '1px solid $border',
           'justifyContent': 'space-between',
           'width': '100%',
-          '@md': {
-            justifyContent: 'space-between',
-          },
+          '@md': { justifyContent: 'space-between' },
           '& .nextui-navbar-container': {
             'border': 'none',
             'maxWidth': '100%',
-
             'gap': '$6',
             '@md': {
               justifyContent: 'end'

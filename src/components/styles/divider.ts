@@ -1,9 +1,10 @@
 import { styled } from '@nextui-org/react'
-
+/* 利用nextUI 提供的 styled 自定义函数组件 Divider */
 export const Divider = styled('div', {
   boxSizing: 'border-box',
   width: '50%',
-  height: '$2',
-  background: '$primary',
-  borderRadius: '$2xl'
+  height: '$1',
+  background: '$primaryBorder',
+  borderRadius: '$2xl',
+  mb: '$5'
 })

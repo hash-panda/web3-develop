@@ -12,15 +12,16 @@ interface Props {
 
 export const Layout = ({ children }: Props) => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
+  /* 取数据源的第一个元素key作为初始激活菜单 */
   const [currentMenu, setCurrentMenu] = React.useState(websites[0].key || '')
   const [_, setLocked] = useLockedBody(false)
+  /* sidebar打开和关闭的状态值 */
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen)
     setLocked(!sidebarOpen)
   }
   const handleCurrentMenu = (href: string) => {
     setCurrentMenu(href)
-    // scroll({})
   }
   return (
     <SidebarContext.Provider

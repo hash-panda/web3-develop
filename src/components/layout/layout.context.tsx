@@ -14,7 +14,7 @@ export const SidebarContext = createContext<SidebarContext>({
    setCollapsed: () => {},
    setActiveMenu: () => {},
 });
-
+/* 使用 createContext 和 useContext 特性，方便在所有内部子组件传值和使用值 */
 export const useSidebarContext = () => {
    return useContext(SidebarContext);
 };

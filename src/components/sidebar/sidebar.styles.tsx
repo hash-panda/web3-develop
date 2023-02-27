@@ -1,5 +1,5 @@
 import { styled } from '@nextui-org/react'
-
+/* 利用nextUI 提供的 styled 自定义Sidebar相关函数组件 */
 export const SidebarWrapper = styled('div', {
   'backgroundColor': '$background',
   'transition': 'transform 0.2s ease',
@@ -49,7 +49,7 @@ export const Overlay = styled('div', {
   },
 })
 
-export const Header = styled('div', {
+export const Title = styled('div', {
   display: 'flex',
   gap: '$8',
   alignItems: 'center',
@@ -81,7 +81,7 @@ export const Footer = styled('div', {
 })
 
 export const Sidebar = Object.assign(SidebarWrapper, {
-  Header,
+  Title,
   Body,
   Overlay,
   Footer,

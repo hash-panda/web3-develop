@@ -1,10 +1,5 @@
 import { styled } from '@nextui-org/react'
-
-export const SidebarWrapper = styled('div', {
-  overflow: 'hidden',
-  height: '100vh',
-  display: 'flex',
-})
+/* 利用nextUI 提供的 styled 自定义Navbar相关函数组件 */
 export const StyledBurgerButton = styled('button', {
   'position': 'absolute',
   'display': 'flex',

@@ -6,7 +6,7 @@ interface Props {
   title: string
   children?: React.ReactNode
 }
-
+/* 和SidebarItem同时使用，展示子菜单 */
 export const SidebarMenu = ({ title, children }: Props) => {
   return (
     <Flex css={{ gap: '$4' }} direction={'column'}>

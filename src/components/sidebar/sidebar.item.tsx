@@ -14,12 +14,13 @@ export const SidebarItem = ({ icon, title, isActive, href = '' }: Props) => {
   const { setCollapsed, setActiveMenu } = useSidebarContext()
 
   const handleClick = (href: string) => {
-    setActiveMenu(href)
+    // setActiveMenu(href)
     if (window.innerWidth < 768) {
       setCollapsed()
     }
   }
   return (
+    /* 利用a标签href属性跳转对应的id（link封住的a标签） */
     <Link css={{ color: '$accents9', maxWidth: '100%', width: '100%' }} href={`#${href}`}>
       <Flex onClick={handleClick.bind(this, href)} css={{
           'gap': '$6',

@@ -5,11 +5,15 @@ body {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
+/* 隐藏body的滚动条 */
+body::-webkit-scrollbar {
+  display: none;
+}
 
 * {
   box-sizing: border-box;
 }
-
+/* 文字在宽度内只显示2行 */
 .line-2 {
   overflow: hidden;
   text-overflow: ellipsis;
