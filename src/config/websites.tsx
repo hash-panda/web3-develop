@@ -1,5 +1,6 @@
 import React from 'react'
 import { HomeIcon } from '../components/icons/sidebar/home-icon'
+import { Paper } from 'react-iconly'
 
 export interface Obj {
   [key: string]: {
@@ -48,7 +49,7 @@ export const websites: ListItem[] = [
   },
   {
     name: 'Dapp 指南',
-    icon: <HomeIcon />,
+    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
     key: 'web3_2',
     arr: [
       {
