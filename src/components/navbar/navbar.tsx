@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link, Navbar } from '@nextui-org/react'
+import { Link, Navbar, Text } from '@nextui-org/react'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { GithubIcon } from '../icons/navbar/github-icon'
 import { SupportIcon } from '../icons/navbar/support-icon'
 import { Box } from '../styles/box'
 import { BurguerButton } from './burguer.button'
 import { DarkModeSwitch } from './darkModeSwitch'
+import { Title } from '../../config/title'
 
 interface Props {
   children: React.ReactNode
@@ -32,6 +33,9 @@ export const NavbarWrapper = ({ children }: Props) => {
       >
         <Navbar.Content showIn='md'>
           <BurguerButton />
+          <Text h3 size={'$xl'} weight={'medium'} css={{ m: 0, color: '$accents9', lineHeight: '$lg', ml: '40px' }}>
+            {Title.name}
+          </Text>
         </Navbar.Content>
 
         <Navbar.Content>

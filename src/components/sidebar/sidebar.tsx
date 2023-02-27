@@ -3,9 +3,10 @@ import { Sidebar } from './sidebar.styles'
 import { Flex } from '../styles/flex'
 import { SidebarTitle } from './sidebar.title'
 import { SidebarItem } from './sidebar.item'
-// import { SidebarMenu } from './sidebar.menu'
+import { SidebarMenu } from './sidebar.menu'
 import { useSidebarContext } from '../layout/layout.context'
 import { websites as menus } from '../../config/websites'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 export const SidebarWrapper = () => {
   const { activeMenu, collapsed, setCollapsed } = useSidebarContext()
@@ -26,6 +27,9 @@ export const SidebarWrapper = () => {
                 )
               })
             }
+            <SidebarMenu title={''} mobileMode={true}>
+              <ConnectButton />
+            </SidebarMenu>
           </Sidebar.Body>
         </Flex>
       </Sidebar>
