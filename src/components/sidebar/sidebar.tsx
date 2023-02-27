@@ -14,7 +14,7 @@ export const SidebarWrapper = () => {
       {/* sidebar手机模式下的遮罩层 */}
       {collapsed ? <Sidebar.Overlay onClick={setCollapsed} /> : null}
       <Sidebar collapsed={collapsed}>
-        <Sidebar.Title css={{ position: 'sticky', top: '0', left: '0', right: '0', zIndex: '203', background: '$backgroundContrast' }}>
+        <Sidebar.Title css={{ position: 'sticky', top: '0', left: '0', right: '0', zIndex: '203', background: '$background' }}>
           <SidebarTitle />
         </Sidebar.Title>
         <Flex direction={'column'} justify={'between'} css={{ height: '100%' }}>
