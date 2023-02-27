@@ -1,5 +1,5 @@
 /* 节流函数 */
-export function throttle(func: Function, time: number, immediate = false) {
+export function throttle(this: any, func: Function, time: number, immediate = false) {
   if (immediate) {
     let prevTime = 0
     return (...args: any) => {
@@ -24,7 +24,7 @@ export function throttle(func: Function, time: number, immediate = false) {
 }
 
 /* 防抖函数 */
-export function debounce(func: Function, time: number, immediate = false) {
+export function debounce(this: any, func: Function, time: number, immediate = false) {
   let timer: number | null = null
   return (...args: any) => {
     if (timer) clearInterval(timer)
