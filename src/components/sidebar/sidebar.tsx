@@ -27,9 +27,9 @@ export const SidebarWrapper = () => {
                 )
               })
             }
-            <SidebarMenu title={''} mobileMode={true}>
+            <Flex css={{ position: 'absolute', bottom: '$6', left: '$10', '@md': { display: 'none' } }}>
               <ConnectButton />
-            </SidebarMenu>
+            </Flex>
           </Sidebar.Body>
         </Flex>
       </Sidebar>
