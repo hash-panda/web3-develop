@@ -1,30 +1,24 @@
 import React, { useEffect } from 'react'
 import type { NextPage } from 'next'
-import { Link } from '@nextui-org/react'
+import { Link, Avatar } from '@nextui-org/react'
 import { useAccount } from 'wagmi'
 import { Account } from '../components/account/index'
 import { websites, ListItem } from '../config/websites'
 import { Box } from '../components/styles/box'
 import { Flex } from '../components/styles/flex'
 import { Divider } from '../components/styles/divider'
-import { MyCard } from '../components/card'
+import { MyCard } from '../components/card/card'
 import { useSidebarContext } from '../components/layout/layout.context'
 import { debounce } from '../utils/index'
 import { BackToTop } from '../components/backToTop'
-import { MyModal } from '../components/modal'
+import { DrawerWrapper } from '../components/drawer/drawer'
 
 const Home: NextPage = () => {
   const { isConnected } = useAccount()
   const { setActiveMenu } = useSidebarContext()
-  const [visible, setVisible] = React.useState(false)
   const [blockHeight, setBlockHeight] = React.useState(0)
   const [isTop, setIsTop] = React.useState(false)
-  const [link, setLink] = React.useState('')
-  /* 跳转第三方网页弹窗 */
-  const modalHandler = (url: string) => { 
-    setVisible(true)
-    setLink(url)
-  }
+  const [detail, setDetail] = React.useState({ title: '', description: '', image: '', key: '', url: ''})
   /* 监听页面滚动 */
   useEffect(() => {
     /* 计算所有元素块高度 */
@@ -43,11 +37,14 @@ const Home: NextPage = () => {
     }, 10)
     document.getElementById('scro')?.addEventListener('scroll', handleScroll)
     /* 组件卸载时移除监听 */
-    window.addEventListener('beforeunload', () => document.getElementById('scro')?.removeEventListener('scroll', handleScroll))
     return function clieanEvent() {
-      window.removeEventListener('beforeunload', () => document.getElementById('scro')?.removeEventListener('scroll', handleScroll))
+      document.getElementById('scro')?.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  const getDrawerContent = (content: any) => {
+    setDetail(content)
+  }
 
   return (
     /* 将父元素设置为滚动区域 */
@@ -63,7 +60,7 @@ const Home: NextPage = () => {
               <Flex css={{ 'pt': '$5', 'gap': '$12', 'height': '100%', 'flexWrap': 'wrap'}} direction={'row'} justify={'start'}>
                 { 
                   item.arr.map((i: any) => {
-                    return (<MyCard key={i.key} site={i} click={(url: string) => {modalHandler(url)}} />)
+                    return (<MyCard key={i.key} site={i} getKey={(contnent: any) => getDrawerContent(contnent)} />)
                   })
                 }
               </Flex>
@@ -82,8 +79,17 @@ const Home: NextPage = () => {
       >_</Box>
       {/* 回到顶部 */}
       <BackToTop backToTop={isTop} />
-      {/* 跳转第三方网址弹窗 */}
-      <MyModal url={link} visible={visible} close={(v: boolean) => { setVisible(v) }} />
+      <DrawerWrapper>
+        <Box>
+          <Flex align={'center'} justify={'start'} css={{ mb: '$6' }}>
+            <Avatar size='sm' src={detail.image} color='primary' bordered />
+            <Box css={{ fontSize: '$xl', fontWeight: '900', ml: '$4' }}>{detail.title}</Box>
+          </Flex>
+          <Divider css={{ width: '60%' }} />
+          <Box css={{ py: '$4', color: '$primary', wordBreak: 'break-word' }}>{ detail.url }</Box>
+          <Box css={{ wordBreak: 'break-word' }}>{ detail.description }</Box>
+        </Box>
+      </DrawerWrapper>
     </Flex>
   )
 }

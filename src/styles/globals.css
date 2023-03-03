@@ -21,3 +21,38 @@ body::-webkit-scrollbar {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical; 
 }
+
+.custom-button {
+  background: var(--nextui-colors-primaryLightContrast);
+  border-radius: var(--nextui-radii-pill);
+  min-width: min-content;
+  --nextui--buttonBorderRadius: var(--nextui-radii-pill);
+  width: auto;
+  border-width: var(--nextui-borderWeights-normal);
+  --nextui--buttonBorderWeight: var(--nextui-borderWeights-normal);
+  font-size: var(--nextui-fontSizes-xs);
+  height: var(--nextui--buttonHeight);
+  line-height: var(--nextui-space-10);
+  --nextui--buttonPadding: var(--nextui-space-3);
+  color: var(--nextui-colors-primarySolidContrast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  box-sizing: border-box;
+  font-weight: var(--nextui-fontWeights-medium);
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  transition: var(--nextui-transitions-button);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  padding-left: var(--nextui-space-5);
+  padding-right: var(--nextui-space-5);
+}

@@ -51,7 +51,7 @@ export const NavbarWrapper = ({ children }: Props) => {
             </Link>
           </Navbar.Content>
           <Navbar.Content hideIn={'md'}>
-            <ConnectButton />
+            <ConnectButton label='连接钱包' />
           </Navbar.Content>
         </Navbar.Content>
       </Navbar>
