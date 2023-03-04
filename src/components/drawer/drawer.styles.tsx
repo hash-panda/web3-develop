@@ -19,6 +19,9 @@ export const DrawerWrapper = styled('div', {
   'flexDirection': 'column',
   'py': '$10',
   'px': '$6',
+  '@md': {
+    'width': '30rem'
+  },
   'variants': {
     open: {
       true: {

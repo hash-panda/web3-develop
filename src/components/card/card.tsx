@@ -70,7 +70,7 @@ export const MyCard = (web: CardProps | any) => {
             <CardButton bgColor='$primaryBorder' func={copyTextToClipboard} popover='复制成功！'>复制地址</CardButton>
             {/* 自定义元素button不识别nextUI的语法糖解析，使用var声明样式变量 */}
             <CardButton bgColor='var(--nextui-colors-primaryLightContrast)' func={handleDetail} native>详情</CardButton>
-            <CardButton bgColor='$primarySolidHover' func={handlePress}>出发</CardButton>
+            <CardButton bgColor='$primarySolidHover' func={handlePress}>跳转</CardButton>
           </Flex>
         </Card.Footer>
       </Card>
