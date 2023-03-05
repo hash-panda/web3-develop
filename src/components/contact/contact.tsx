@@ -1,15 +1,23 @@
-import { Avatar } from "@nextui-org/react";
-import React from "react";
-import { Flex } from "../styles/flex";
+import React from 'react'
+import { Link } from '@nextui-org/react'
+import { GithubIcon } from '../icons/navbar/github-icon'
+import { WeiboIcon } from '../icons/navbar/weibo-icon'
+import { TwitterIcon } from '../icons/navbar/twitter-icon'
+import { Flex } from '../styles/flex'
+import { contacts } from '../../config/contact'
 
-/* 联系方式 */
 export const MyContact = () => {
   return (
-    <Flex css={{ gap: "$6", py: "$4" }} direction={"row"} align={"center"}>
-      {/* https://weibo.com/u/7565123862 */}
-      <Avatar squared text="微博" />
-      {/* https://twitter.com/geek_dao */}
-      <Avatar squared text="推特" />
+    <Flex css={{ gap: '$8' }} align={'center'}>
+      <Link href={contacts.weibo} target={'_blank'}>
+        <WeiboIcon />
+      </Link>
+      <Link href={contacts.twitter} target={'_blank'}>
+        <TwitterIcon />
+      </Link>
+      <Link href={contacts.github} target={'_blank'}>
+        <GithubIcon />
+      </Link>
     </Flex>
-  );
-};
+  )
+}

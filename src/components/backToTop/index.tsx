@@ -9,7 +9,7 @@ interface Btt {
 export function BackToTop({ backToTop }: Btt) {
   const handleToTop = () => {
     /* 将滚动区域滚动到0位置 */
-    document.getElementById('scro')?.scrollTo({ top: 0, behavior: 'smooth' })
+    document.getElementById('scroll')?.scrollTo({ top: 0, behavior: 'smooth' })
   }
   return <Button 
     rounded

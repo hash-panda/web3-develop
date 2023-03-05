@@ -3,10 +3,10 @@ import { Svg } from '../../styles/svg'
 
 export const GithubIcon = () => {
   return (
-    <Svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' css={{ transform: 'scale(1.3)' }}>
+    <Svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' css={{ transform: 'scale(1.35)' }}>
       <Svg.Path
         css={{
-          fill: '$accents6'
+          fill: '$accents9'
         }}
         fillRule='evenodd'
         clipRule='evenodd'

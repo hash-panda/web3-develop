@@ -47,10 +47,11 @@ export const MyCard = (web: CardProps | any) => {
       >
         { site.isRecommended ? <RecommendIcon /> : null}
         <Card.Body css={{ py: '$0' }}>
-          <Flex css={{ gap: '$6', py: '$4' }} direction={'row'} align={'center'}>
+          <Flex css={{ gap: '$6', py: '$4' }} direction={'row'}>
             {site.type === 'card'?
               <Avatar
               size='xl'
+              css={{ mt: '$8' }}
               src={site.image}
               color='primary'
               bordered

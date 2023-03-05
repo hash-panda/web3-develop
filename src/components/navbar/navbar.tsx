@@ -2,7 +2,8 @@ import React from 'react'
 import { Link, Navbar, Text } from '@nextui-org/react'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { GithubIcon } from '../icons/navbar/github-icon'
-import { SupportIcon } from '../icons/navbar/support-icon'
+import { WeiboIcon } from '../icons/navbar/weibo-icon'
+import { TwitterIcon } from '../icons/navbar/twitter-icon'
 import { Box } from '../styles/box'
 import { BurguerButton } from './burguer.button'
 import { DarkModeSwitch } from './darkModeSwitch'
@@ -40,19 +41,11 @@ export const NavbarWrapper = ({ children }: Props) => {
         </Navbar.Content>
 
         <Navbar.Content>
-          {/* <Navbar.Content hideIn={'md'}>
-            <SupportIcon />
-          </Navbar.Content> */}
-          <Navbar.Content>
+          <Navbar.Content hideIn={'md'}>
             <MyContact />
           </Navbar.Content>
           <Navbar.Content>
             <DarkModeSwitch />
-          </Navbar.Content>
-          <Navbar.Content>
-            <Link href='https://github.com/geek-dao/web3-develop' target={'_blank'}>
-              <GithubIcon />
-            </Link>
           </Navbar.Content>
           <Navbar.Content hideIn={'md'}>
             <ConnectButton label='连接钱包' />

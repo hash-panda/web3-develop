@@ -27,7 +27,7 @@ export interface SITE {
 export interface ListItem {
   name: string,
   arr: SITE[],
-  icon: React.ReactNode
+  icon: string
   key: string
 }
 
@@ -35,7 +35,7 @@ export interface ListItem {
 export const websites: ListItem[] = [
   {
     name: '开发指南',
-    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    icon: 'Paper',
     key: 'devGuide',
     arr: [
       {
@@ -77,7 +77,7 @@ export const websites: ListItem[] = [
   },
   {
     name: 'Solidity / Web3 教程',
-    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    icon: 'Category',
     key: 'solidity',
     arr: [
       {
@@ -134,7 +134,7 @@ export const websites: ListItem[] = [
   },
   {
     name: '快速开发框架',
-    icon: <HomeIcon />,
+    icon: 'Plus',
     key: 'fastDevelop',
     arr: [
       {
@@ -174,7 +174,7 @@ export const websites: ListItem[] = [
   },
   {
     name: '接入钱包',
-    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    icon: 'Wallet',
     key: 'wallet',
     arr: [
       {
@@ -206,7 +206,7 @@ export const websites: ListItem[] = [
   },
   {
     name: 'RPC',
-    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    icon: 'Setting',
     key: 'rpc',
     arr: [
       {
@@ -229,14 +229,14 @@ export const websites: ListItem[] = [
   },
   {
     name: 'MOVE 学习',
-    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    icon: 'Folder',
     key: 'moveLearns',
     arr: [
       {
         title: 'MOVE 开发文档',
         url: 'https://move-language.github.io/move/introduction.html',
         image: DefaultLogo.src,
-        description: 'MOVE 学习文档',
+        description: 'MOVE 用于安全、沙盒化和正式验证编程的下一代语言',
         key: 'moveDocs',
         type: 'card',
       },
@@ -244,7 +244,7 @@ export const websites: ListItem[] = [
         title: 'MOVE 资源汇总',
         url: 'https://github.com/MystenLabs/awesome-move',
         image: DefaultLogo.src,
-        description: 'MOVE 资源汇总',
+        description: 'Move开发社区和资源汇总，这里有关于Move，你需要的一切',
         key: 'moveAwesome',
         type: 'card',
       },
@@ -252,7 +252,7 @@ export const websites: ListItem[] = [
   },
   {
     name: '其他工具',
-    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    icon: 'Discount',
     key: 'others',
     arr: [
       {

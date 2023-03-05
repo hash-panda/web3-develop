@@ -2,10 +2,10 @@ import { Text, Link } from '@nextui-org/react'
 import React from 'react'
 import { useSidebarContext } from '../layout/layout.context'
 import { Flex } from '../styles/flex'
-
+import { MyIcon } from '../icons/sidebar/iconly'
 interface Props {
   title: string
-  icon: React.ReactNode
+  icon: string
   isActive?: boolean
   href?: string
 }
@@ -39,7 +39,7 @@ export const SidebarItem = ({ icon, title, isActive, href = '' }: Props) => {
         }}
         align={'center'}
       >
-        {icon}
+        <MyIcon name={icon} />
         <Text span weight={'normal'} size={'$base'} css={{ color: '$accents9' }}>
           {title}
         </Text>

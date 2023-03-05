@@ -88,8 +88,8 @@ const Home: NextPage = () => {
           <Divider css={{ width: '60%' }} />
           <Box css={{ wordBreak: 'break-word' }}>{ detail.description }</Box>
           <Flex css={{ position: 'absolute', bottom: '$6', left: '$10', '@md': { display: 'none' } }}>
-          <CardButton bgColor='$primarySolidHover' func={openWebPage(detail.url)}>跳转</CardButton>
-            </Flex>
+            <CardButton bgColor='$primarySolidHover' func={openWebPage(detail.url)}>跳转</CardButton>
+          </Flex>
         </Box>
       </DrawerWrapper>
     </Flex>
