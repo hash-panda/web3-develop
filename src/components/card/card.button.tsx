@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Popover } from '@nextui-org/react'
 import { Box } from '../styles/box'
 
-interface ButtongProps {
+interface ButtonProps {
   children: React.ReactNode
   bgColor?: string
   func?: Function,
@@ -10,7 +10,7 @@ interface ButtongProps {
   popover?: string
 }
 
-export const CardButton = ({ bgColor, func, native = false, popover, children }: ButtongProps) => {
+export const CardButton = ({ bgColor, func, native = false, popover, children }: ButtonProps) => {
   const [isOpen, setIsOpen] = React.useState(false)
   const handleNativeClick = (e: any) => {
     if (func && typeof func === 'function') {
@@ -23,8 +23,8 @@ export const CardButton = ({ bgColor, func, native = false, popover, children }:
       func()
     }
   }
-  const overlayClose = async (isopen: boolean) => {
-    setIsOpen(isopen)
+  const overlayClose = async (isOpenStatus: boolean) => {
+    setIsOpen(isOpenStatus)
     setTimeout(async () => {
       await setIsOpen(false)
     }, 2000)

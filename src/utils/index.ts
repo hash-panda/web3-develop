@@ -40,3 +40,11 @@ export function debounce(this: any, func: Function, time: number, immediate = fa
     }
   }
 }
+/**
+ * open a window web page
+ * @param url 
+ * @returns Function
+ */
+export const openWebPage = (url: string) => {
+  return ()=>{window.open(url, '_blank')}
+}

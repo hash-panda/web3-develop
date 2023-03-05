@@ -1,6 +1,9 @@
 import React from 'react'
 import { HomeIcon } from '../components/icons/sidebar/home-icon'
 import web3_2 from '../../public/webImage/web3_2.jpg'
+import alchemyLogo from '../../public/webImage/alchemy-logo.svg'
+import web3ModalLogo from '../../public/webImage/web3modal-logo.png'
+import DefaultLogo from '../../public/logo.png'
 import { Paper } from 'react-iconly'
 import { StaticImageData } from 'next/image'
 
@@ -29,15 +32,99 @@ export interface ListItem {
 /* 数据源 */
 export const websites: ListItem[] = [
   {
-    name: 'Web3 开发',
+    name: '开发指南',
+    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    key: 'web3_2',
+    arr: [
+      {
+        title: 'Web3 DApp 最佳编程实践',
+        url: 'https://guoyu.mirror.xyz/RD-xkpoxasAU7x5MIJmiCX4gll3Cs0pAd5iM258S1Ek',
+        image: web3_2.src,
+        description: '这篇文章将会涉及到开发一个 DApp 所涵盖的几乎所有方面内容。包括：认识 DApp 技术栈、智能合约编码、开发工作流与单元测试、前端与客户端开发、开发、测试与生产环境调试、服务端编码与集成、合约部署方案 L1s & L2、去中心化储存方案等',
+        key: 'guoyu'
+      },
+      {
+        title: '全栈 Web3 开发完整指南：手把手教你开发一个web3应用',
+        url: 'https://www.defidaonews.com/article/6728290',
+        image: DefaultLogo.src,
+        description: '使用 Next.js、Polygon、Solidity、The Graph、IPFS 和 Hardhat 构建全栈 web3 应用程序。在这个深入的教程中，您将学习用于构建全栈 web3 应用程序的工具、协议和框架，最重要的是 - 如何将所有内容放在一起为将来构建您自己的任何想法奠定基础。        ',
+        key: 'web3devDapp'
+      },
+      {
+        title: 'Web3.0 解决了什么问题',
+        url: 'https://mp.weixin.qq.com/s/-yWw1qJ2hcpno62ibmtJCQ',
+        image: DefaultLogo.src,
+        description: '3个问题：有什么场景是在Web 2不能完成，必须在Web 3能完成的？如果有，那这个场景下的Web 3产品有多少人需要？这个场景下，Web 3的产品解决问题的效率会更好吗？',
+        key: 'web3Solve'
+      },
+      {
+        title: 'Dune Analytics 初学者指南',
+        url: 'https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o',
+        image: DefaultLogo.src,
+        description: '学习如何使用Dune分析，适合完全的Dune和SQL初学者。Dune可能是目前向公众提供的最强大的区块链数据分析工具，最棒的是：它是免费的!通过Dune，你可以通过一个公共数据库近乎实时地访问区块链数据，你可以通过Dune的网站使用SQL查询。',
+        key: 'DuneAnalytics'
+      },
+    ]
+  },
+  {
+    name: 'Solidity / Web3 教程',
+    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    key: 'solidity',
+    arr: [
+      {
+        title: 'Solidity 官方文档',
+        url: 'https://solidity-cn.readthedocs.io/zh/develop/',
+        image: 'https://solidity-cn.readthedocs.io/zh/develop/_images/logo.svg',
+        description: 'Solidity 是一门面向合约的、为实现智能合约而创建的高级编程语言。这门语言受到了 C++，Python 和 Javascript 语言的影响，设计的目的是能在以太坊虚拟机（EVM）上运行。Solidity 是静态类型语言，支持继承、库和复杂的用户定义类型等特性。下面您将会看到，使用 Solidity 语言，可以为投票、众筹、秘密竞价（盲拍）、多重签名的钱包以及其他应用创建合约。',
+        key: 'solidityDocs'
+      },
+      {
+        title: 'wtf.academy',
+        url: 'https://wtf.academy/',
+        image: 'https://wtf.academy/img/wtflogo.png',
+        description: '面向Web2开发者的Web3开源学院。学习，贡献，并获得链上技术认证。包括solidity、ether、前端等学习教程',
+        key: 'wtfAcademy'
+      },
+      {
+        title: 'Solidity Example',
+        url: 'https://solidity-by-example.org/',
+        image: 'https://solidity-by-example.org/favicon.ico',
+        description: '通过具体的例子展示和介绍Solidity',
+        key: 'solidity-by-example'
+      },
+      {
+        title: 'OpenZeppelin',
+        url: 'https://docs.openzeppelin.com/',
+        image: 'https://www.openzeppelin.com/hubfs/oz-favicon.svg',
+        description: 'OpenZeppelin 提供安全产品来构建、自动化和操作分散的应用程序。OpenZeppelin 是一家以太坊安全公司，其为流行的智能合约标准开发了一组合约，这些合约经过了大量的测试和安全审查，所以如果我们需要实现这些标准合约时，应该尝试找到OpenZeppelin 提供的合约，而不是重头开始重写整个标准。',
+        key: 'OpenZeppelin'
+      },
+      {
+        title: 'CryptoZombies',
+        url: 'https://cryptozombies.io/en/course',
+        image: DefaultLogo.src,
+        description: 'CryptoZombies是一个免费、开源、互动的代码学校，教你在以太坊上构建游戏。该课程是为Solidity的初学者设计的，从绝对的基础知识开始。因此，如果你以前从未用Solidity编码过，不用担心--我们会一步一步地指导你。',
+        key: 'CryptoZombies'
+      },
+      {
+        title: 'buildspace',
+        url: 'https://buildspace.so/',
+        image: 'https://buildspace.so/images/favicon-64x64.png',
+        description: 'Web3开发学习平台。课程包括：AI头像生成、GPT-3开发学习、ENS、Solidity、Ethereum NFT、Solana Web3 App、DAOs、Solana Pay、Solana NFT、NFT Game、Flow 等',
+        key: 'buildspace'
+      },
+    ]
+  },
+  {
+    name: '快速开发框架',
     icon: <HomeIcon />,
-    key: 'web3_1',
+    key: 'fastDevelop',
     arr: [
       {
         title: 'thirdweb',
         url: 'https://thirdweb.com/',
         image: 'https://thirdweb.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwhite-logo.a8cda9b2.png&w=1080&q=75',
-        description: 'The thirdweb is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks.',
+        description: 'thirdweb是一个完整的web3开发框架，它提供了将你的应用程序和游戏连接到去中心化网络所需的一切',
         key: 'thirdweb'
       },
       {
@@ -48,27 +135,104 @@ export const websites: ListItem[] = [
         key: 'wagmi'
       },
       {
+        title: 'useDapp',
+        url: 'https://usedapp.io/',
+        image: 'https://usedapp.io/img/favicon.svg',
+        description: '基于React的用于快速Dapp开发的框架。简单。稳健。可扩展。可测试。',
+        // author: '郭宇',
+        key: 'useDapp'
+      },
+      {
         title: 'web3js',
         url: 'https://web3js.org/',
-        image: 'data:image/png;base64,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',
-        description: 'The web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket',
+        image: 'https://web3js.org/web3js.png',
+        description: 'web3.js是一个库的集合，允许你使用HTTP、IPC或WebSocket与本地或远程以太坊节点进行交互',
         key: 'web3js'
       }
     ]
   },
   {
-    name: 'Dapp 指南',
+    name: '接入钱包',
     icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
-    key: 'web3_2',
+    key: 'wallet',
     arr: [
       {
-        title: 'Web3 DApp 最佳编程实践指南',
-        url: 'https://guoyu.mirror.xyz/RD-xkpoxasAU7x5MIJmiCX4gll3Cs0pAd5iM258S1Ek',
-        image: web3_2.src,
-        description: '这篇文章将会涉及到开发一个 DApp 所涵盖的几乎所有方面内容。包括：认识 DApp 技术栈、智能合约编码、开发工作流与单元测试、前端与客户端开发、开发、测试与生产环境调试、服务端编码与集成、合约部署方案 L1s & L2、去中心化储存方案等',
-        // author: '郭宇',
-        key: 'guoyu'
-      }
+        title: 'RainbowKit',
+        url: 'https://www.rainbowkit.com/',
+        image: 'https://www.rainbowkit.com/rainbow.svg',
+        description: 'RainbowKit是一个React库，可以轻松地将钱包连接到你的dapp中。开箱即用。易于定制',
+        key: 'rainbowKit'
+      },
+      {
+        title: 'ConnectKit',
+        url: 'https://docs.family.co/connectkit',
+        image: 'https://family.co/favicon-alt.png',
+        description: 'ConnectKit是一个强大的React组件库，用于连接钱包和你的dApp。它支持最流行的连接器和链，并提供一个美丽的、无缝的体验。',
+        key: 'connectkit'
+      },
+      {
+        title: 'Web3Modal',
+        url: 'https://web3modal.com/',
+        image: web3ModalLogo.src,
+        description: 'Web3Modal是一个优雅简单而强大的库，帮助你管理你的多链钱包连接流程，所有这些都在一个地方。它的设计同时考虑到了开发人员和最终用户，易于集成和定制，带来了时尚和独特的体验。',
+        key: 'Web3Modal'
+      },
+    ]
+  },
+  {
+    name: 'RPC',
+    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    key: 'rpc',
+    arr: [
+      {
+        title: 'Alchemy',
+        url: 'https://www.alchemy.com/',
+        image: alchemyLogo.src,
+        description: '最强大的web3开发工具集，可轻松构建和扩展您的dApp',
+        key: 'Alchemy'
+      },
+      {
+        title: 'Infura',
+        url: 'https://www.infura.io/zh',
+        image: 'https://app.infura.io/favicon/favicon-32x32.png',
+        description: 'Infura帮助Web3开发者在区块链基础设施上建立世界级的应用程序。Infura Web3与通用API的连接提供了对Web3网络的简单、强大和可靠的访问，使开发人员能够专注于他们最擅长的事情：发展他们的产品、服务和社区。',
+        key: 'Infura'
+      },
+    ]
+  },
+  {
+    name: 'MOVE 学习',
+    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    key: 'MoveLearns',
+    arr: [
+      {
+        title: 'MOVE 开发文档',
+        url: 'https://move-language.github.io/move/introduction.html',
+        image: DefaultLogo.src,
+        description: 'MOVE 学习文档',
+        key: 'moveDocs'
+      },
+      {
+        title: 'MOVE 资源汇总',
+        url: 'https://github.com/MystenLabs/awesome-move',
+        image: DefaultLogo.src,
+        description: 'MOVE 资源汇总',
+        key: 'moveAwesome'
+      },
+    ]
+  },
+  {
+    name: '其他工具',
+    icon: <Paper set='bold' primaryColor='var(--nextui-colors-accents6)'/>,
+    key: 'others',
+    arr: [
+      {
+        title: 'Dune',
+        url: 'https://dune.com/docs/zh/getting-started/',
+        image: 'https://dune.com/docs/zh/images/dune-icon-only.png',
+        description: 'Dune 是一个强大的区块链研究工具，配备了您需要的所有工具，以发现、探索和可视化大量区块链数据',
+        key: 'dune'
+      },
     ]
   },
 ]

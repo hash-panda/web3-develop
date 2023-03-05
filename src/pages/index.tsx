@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react'
 import type { NextPage } from 'next'
-import { Link, Avatar } from '@nextui-org/react'
+import { Link, Avatar, Button } from '@nextui-org/react'
 import { useAccount } from 'wagmi'
-import { Account } from '../components/account/index'
 import { websites, ListItem } from '../config/websites'
 import { Box } from '../components/styles/box'
 import { Flex } from '../components/styles/flex'
 import { Divider } from '../components/styles/divider'
 import { MyCard } from '../components/card/card'
 import { useSidebarContext } from '../components/layout/layout.context'
-import { debounce } from '../utils/index'
+import { debounce, openWebPage } from '../utils/index'
 import { BackToTop } from '../components/backToTop'
 import { DrawerWrapper } from '../components/drawer/drawer'
+import { CardButton } from '../components/card/card.button'
 
 const Home: NextPage = () => {
   const { isConnected } = useAccount()
@@ -35,10 +35,10 @@ const Home: NextPage = () => {
       const _item: any = _tl.filter(i => { return distance >= i.start  && distance < i.end })
       setActiveMenu(_item[0]._key)
     }, 10)
-    document.getElementById('scro')?.addEventListener('scroll', handleScroll)
+    document.getElementById('scroll')?.addEventListener('scroll', handleScroll)
     /* 组件卸载时移除监听 */
-    return function clieanEvent() {
-      document.getElementById('scro')?.removeEventListener('scroll', handleScroll)
+    return function cleanEvent() {
+      document.getElementById('scroll')?.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
 
   return (
     /* 将父元素设置为滚动区域 */
-    <Flex id='scro' css={{  overflow: 'scroll' , scrollBehavior: 'smooth', height: 'calc(100vh - var(--nextui--navbarHeight))'}} justify={'start'} direction={'column'}>
+    <Flex id='scroll' css={{  overflow: 'scroll' , scrollBehavior: 'smooth', height: 'calc(100vh - var(--nextui--navbarHeight))'}} justify={'start'} direction={'column'}>
       {
         websites.map((item: ListItem) => {
           return (
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
               <Flex css={{ 'pt': '$5', 'gap': '$12', 'height': '100%', 'flexWrap': 'wrap'}} direction={'row'} justify={'start'}>
                 { 
                   item.arr.map((i: any) => {
-                    return (<MyCard key={i.key} site={i} getKey={(contnent: any) => getDrawerContent(contnent)} />)
+                    return (<MyCard key={i.key} site={i} getKey={(content: any) => getDrawerContent(content)} />)
                   })
                 }
               </Flex>
@@ -86,8 +86,10 @@ const Home: NextPage = () => {
             <Box css={{ fontSize: '$xl', fontWeight: '900', ml: '$4' }}>{detail.title}</Box>
           </Flex>
           <Divider css={{ width: '60%' }} />
-          <Box css={{ py: '$4', color: '$primary', wordBreak: 'break-word' }}>{ detail.url }</Box>
           <Box css={{ wordBreak: 'break-word' }}>{ detail.description }</Box>
+          <Flex css={{ position: 'absolute', bottom: '$6', left: '$10', '@md': { display: 'none' } }}>
+          <CardButton bgColor='$primarySolidHover' func={openWebPage(detail.url)}>跳转</CardButton>
+            </Flex>
         </Box>
       </DrawerWrapper>
     </Flex>

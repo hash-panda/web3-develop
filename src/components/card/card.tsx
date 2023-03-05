@@ -1,10 +1,11 @@
-import { Card, Text, Avatar, Tooltip, Popover, Button } from '@nextui-org/react'
+import { Card, Text, Avatar } from '@nextui-org/react'
 import React from 'react'
 import { Flex } from '../styles/flex'
 import { Box } from '../styles/box'
 import { SITE } from '../../config/websites'
 import { CardButton } from './card.button'
 import { useSidebarContext } from '../layout/layout.context'
+import { openWebPage } from '../../utils'
 
 interface content {
   url: string;
@@ -36,16 +37,13 @@ export const MyCard = (web: CardProps | any) => {
     setDrawerOpen()
   }
 
-  const handlePress = () => {
-    window.open(site.url, '_blank')
-  }
   return (
     // <Tooltip content={tipContent({ url: site.url, desc: site.description })} enterDelay={600}>
       <Card 
         isHoverable
         isPressable
         variant='bordered' 
-        css={{ mw: '375px', width: '20rem', maxHeight: '10rem', borderRadius: '$xl', px: '$6', cursor: 'pointer', '&:hover': { borderColor: '$primary' } }}
+        css={{ mw: '375px', width: '20rem', maxHeight: '13rem', borderRadius: '$xl', px: '$6', cursor: 'pointer', '&:hover': { borderColor: '$primary' } }}
       >
         <Card.Body css={{ py: '$0' }}>
           <Flex css={{ gap: '$6', py: '$4' }} direction={'row'} align={'center'}>
@@ -59,7 +57,7 @@ export const MyCard = (web: CardProps | any) => {
               <Text span size={'$md'} weight={'semibold'}>
                 {site.title}
               </Text>
-              <Text span size={'$xs'} className='line-2'>
+              <Text span size={'$xs'} className='line-3'>
                 {site.description}
               </Text>
             </Flex>
@@ -70,7 +68,7 @@ export const MyCard = (web: CardProps | any) => {
             <CardButton bgColor='$primaryBorder' func={copyTextToClipboard} popover='复制成功！'>复制地址</CardButton>
             {/* 自定义元素button不识别nextUI的语法糖解析，使用var声明样式变量 */}
             <CardButton bgColor='var(--nextui-colors-primaryLightContrast)' func={handleDetail} native>详情</CardButton>
-            <CardButton bgColor='$primarySolidHover' func={handlePress}>跳转</CardButton>
+            <CardButton bgColor='$primarySolidHover' func={openWebPage(site.url)}>跳转</CardButton>
           </Flex>
         </Card.Footer>
       </Card>
