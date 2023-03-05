@@ -7,6 +7,7 @@ import { SidebarItem } from './sidebar.item'
 import { useSidebarContext } from '../layout/layout.context'
 import { websites as menus } from '../../config/websites'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import { MyContact } from '../contact/contact'
 
 export const SidebarWrapper = () => {
   const { activeMenu, collapsed, setCollapsed } = useSidebarContext()
@@ -29,6 +30,7 @@ export const SidebarWrapper = () => {
             }
             <Flex css={{ position: 'absolute', bottom: '$6', left: '$10', '@md': { display: 'none' } }}>
               <ConnectButton label='连接钱包' />
+              <MyContact css={{ ml: '$12', gap: '$4' }} />
             </Flex>
           </Sidebar.Body>
         </Flex>
