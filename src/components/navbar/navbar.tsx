@@ -7,6 +7,7 @@ import { Box } from '../styles/box'
 import { BurguerButton } from './burguer.button'
 import { DarkModeSwitch } from './darkModeSwitch'
 import { Title } from '../../config/title'
+import { MyContact } from '../contact/contact'
 
 interface Props {
   children: React.ReactNode
@@ -42,6 +43,9 @@ export const NavbarWrapper = ({ children }: Props) => {
           {/* <Navbar.Content hideIn={'md'}>
             <SupportIcon />
           </Navbar.Content> */}
+          <Navbar.Content>
+            <MyContact />
+          </Navbar.Content>
           <Navbar.Content>
             <DarkModeSwitch />
           </Navbar.Content>
