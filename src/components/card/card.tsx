@@ -51,7 +51,7 @@ export const MyCard = (web: CardProps | any) => {
             {site.type === 'card'?
               <Avatar
               size='xl'
-              css={{ mt: '$8' }}
+              css={{ mt: '$8', '& img': { background: '$backgroundAlpha !important' } }}
               src={site.image}
               color='primary'
               bordered
