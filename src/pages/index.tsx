@@ -53,7 +53,7 @@ const Home: NextPage = () => {
         websites.map((item: ListItem) => {
           return (
             <Flex id={item.key} key={item.name} css={{ 'px': '$12', 'pt': '$10' }} direction={'column'}>
-              <Link css={{ fontSize: '$2xl', fontWeight: 'bolder', color: '$primary' }} id={item.key}>
+              <Link css={{ fontSize: '$2xl', fontWeight: 'bolder' }} id={item.key}>
                 { item.name }
               </Link>
               <Divider />

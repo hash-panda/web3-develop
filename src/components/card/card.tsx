@@ -6,6 +6,7 @@ import { SITE } from '../../config/websites'
 import { CardButton } from './card.button'
 import { useSidebarContext } from '../layout/layout.context'
 import { openWebPage } from '../../utils'
+import { RecommendIcon } from '../icons/recommendIcon'
 
 interface content {
   url: string;
@@ -38,21 +39,22 @@ export const MyCard = (web: CardProps | any) => {
   }
 
   return (
-    // <Tooltip content={tipContent({ url: site.url, desc: site.description })} enterDelay={600}>
-      <Card 
+      <Card
         isHoverable
         isPressable
-        variant='bordered' 
+        variant='bordered'
         css={{ mw: '375px', width: '20rem', maxHeight: '13rem', borderRadius: '$xl', px: '$6', cursor: 'pointer', '&:hover': { borderColor: '$primary' } }}
       >
+        { site.isRecommended ? <RecommendIcon /> : null}
         <Card.Body css={{ py: '$0' }}>
           <Flex css={{ gap: '$6', py: '$4' }} direction={'row'} align={'center'}>
-            <Avatar
+            {site.type === 'card'?
+              <Avatar
               size='xl'
               src={site.image}
               color='primary'
               bordered
-            />
+            />: null}
             <Flex css={{ gap: '$6', py: '$4' }} direction={'column'}>
               <Text span size={'$md'} weight={'semibold'}>
                 {site.title}
@@ -65,13 +67,12 @@ export const MyCard = (web: CardProps | any) => {
         </Card.Body>
         <Card.Footer>
           <Flex justify={'end'} align={'center'} css={{ gap: '$4', width: '100%' }}>
-            <CardButton bgColor='$primaryBorder' func={copyTextToClipboard} popover='复制成功！'>复制地址</CardButton>
+            <CardButton bgColor='$primaryBorder' func={copyTextToClipboard} popover='复制成功！'>复制链接</CardButton>
             {/* 自定义元素button不识别nextUI的语法糖解析，使用var声明样式变量 */}
             <CardButton bgColor='var(--nextui-colors-primaryLightContrast)' func={handleDetail} native>详情</CardButton>
             <CardButton bgColor='$primarySolidHover' func={openWebPage(site.url)}>跳转</CardButton>
           </Flex>
         </Card.Footer>
       </Card>
-    // </Tooltip>
   )
 }

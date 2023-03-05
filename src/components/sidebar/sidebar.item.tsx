@@ -35,7 +35,7 @@ export const SidebarItem = ({ icon, title, isActive, href = '' }: Props) => {
           '&:active': {
             transform: 'scale(0.98)',
           },
-          ...(isActive ? { 'bg': '$purple200', '& svg path': { fill: '$purple600', } } : { '&:hover': { bg: '$accents2' } })
+          ...(isActive ? { bg: '$purple200', '& svg path': { fill: '$purple600', } } : { '&:hover': { bg: '$accents2' } })
         }}
         align={'center'}
       >
